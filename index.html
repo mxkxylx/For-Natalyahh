@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Natalyah 💙</title>
+  <style>
+    body {
+      background: linear-gradient(#ffb7d5, #ffdde8);
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto; 
+      padding: 40px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 40px;
+      text-shadow: 2px 2px #ff6fa3;
+      margin-bottom: 10px;
+    }
+
+    #messageBox {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 18px;
+      color: #444;
+      line-height: 1.5;
+      display: none;
+      white-space: pre-wrap; /* keeps your paragraph spacing */
+    }
+
+    button {
+      margin-top: 20px;
+      background: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: floatUp 4s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-600px); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hi 💙</h1>
+  <button onclick="reveal()">Click to read ✨</button>
+
+  <div id="messageBox">
+I made you a little e-card because you deserve an apology, honestly more. But Natalyah, you mean so much to me. I'm so sorry for everything I've put you through these past 4–5 years and previously. I'm sorry for always lying to you and for constantly standing you up in the past, and for being inconsistent with you and making you feel unseen, unheard, and unwanted. I'm sorry for neglecting you so many times and not being there for you when you needed someone.
+
+I'm really sorry for being a huge jerk 2 years ago and before that. I'm sorry for all the broken promises I've made you and didn't keep.
+
+I don't want us to never speak to each other again or never see each other again. I want to share everything with you — everything I do in life, everywhere I go. I want you there with me, even if it's just as friends.
+
+I can't stop thinking about you and all the time we spent together. I really want to share so much with you. I want to bring you everywhere with me and just show you how much fun we can really have together. That's all I've been thinking about all year — how much better things would be if you were there with me. I wish you did come with me.
+
+But I'm really sorry. I really messed a lot of things up with us. I want to be there for you. I want to make things right, or at least be on good terms with you. I know I've apologized countless times, but I mean it. I'm sorry, and I hope you are doing well. 💙
+
+-Makayla💙
+  </div>
+
+  <script>
+    function reveal() {
+      document.getElementById("messageBox").style.display = "block";
+    }
+
+    // floating hearts
+    setInterval(() => {
+      const h = document.createElement("div");
+      h.classList.add("heart");
+      h.textContent = "💗";
+      h.style.left = Math.random() * window.innerWidth + "px";
+      h.style.top = "100vh";
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 4000);
+    }, 400);
+  </script>
+
+</body>
+</html>
+
